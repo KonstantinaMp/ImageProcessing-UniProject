@@ -21,17 +21,8 @@ def nnInterpolation(Tinv,img):
     for i, row in enumerate(img):
         for j, col in enumerate(row):
             x, y, _ = np.matmul(Tinv, np.array([i, j, 1]))
-            if np.floor(x) == x and np.floor(y) == y:
-                newImg[i, j] = img[int(x), int(y)]
-                continue
-            if np.abs(np.floor(x) - x) < np.abs(np.ceil(x) - x):
-                x = int(np.floor(x))
-            else:
-                x = int(np.ceil(x))
-            if np.abs(np.floor(y) - y) < np.abs(np.ceil(y) - y):
-                y = int(np.floor(y))
-            else:
-                y = int(np.ceil(y))
+            x = int(np.round(x))
+            y = int(np.round(y))
             if x > xMax:
                 x = xMax
             if y > yMax:
