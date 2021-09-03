@@ -1,4 +1,3 @@
-# proti-seira-askiseon
+Image Processing (uni project)
 Μπουρογιάννη Κωνσταντίνα 
-Α.Μ. : 2775
-Έτος - Εξάμηνο: 6ο – 12ο  
+
